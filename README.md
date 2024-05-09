@@ -1,7 +1,9 @@
 # cbz-exploder
 Breaks up all cbz files of separate volumes and chapters into sortable images.
 
-The output of the jpgs are useful to plug into a tool like [KCC](https://github.com/ciromattia/kcc) to convert into a **SINGLE** epub format without any faff.
+Fun fact, `cbz` files are just glorified `zip` files. All the images can be zipped and they will be ordered, then simply rename the extension to `cbz`.
+
+You can also plug the images into a tool like [KCC](https://github.com/ciromattia/kcc) to convert into a single `epub` format without any faff
 
 ## How to use
 Install python and click `cbz_exploder.py`, or run from the terminal
