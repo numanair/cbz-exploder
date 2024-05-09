@@ -25,8 +25,9 @@ for file in os.listdir(directory):
                 os.makedirs(tmp_dir_path)
                 
             zip_ref.extractall(tmp_dir_path)
-            for file in os.listdir(tmp_dir_path):
-                os.rename(os.path.join(tmp_dir_path, file), os.path.join(output_dir_path, f"V{vol_no}_C{chap_no}_{chap_minor_part}_{file}"))
             
+            for root, subdirs, files in os.walk(tmp_dir_path):               
+                for file in files:
+                    os.rename(os.path.join(root, file), os.path.join(output_dir_path, f"V{vol_no}_C{chap_no}_{chap_minor_part}_{file}"))
+                
             shutil.rmtree(tmp_dir_path)
-            
