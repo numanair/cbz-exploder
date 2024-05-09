@@ -14,7 +14,7 @@ os.makedirs(output_dir_path)
     
 for file in os.listdir(directory):
     if file.endswith(".cbz"): 
-        reg = re.search(r"[Vv].*?(\d+).*?[Cc].*?(\d+)\.?(\d*)", file)
+        reg = re.search(r"[Vv].*?(\d+).*?[Cc]?.*?(\d+)\.?(\d*)", file)
         print(f"PROCESSING {file}")
         vol_no = reg.group(1)
         chap_no = reg.group(2)
